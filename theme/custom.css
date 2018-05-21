@@ -1,0 +1,18 @@
+.reveal .slide-background.bg-size-contain {
+    background-size: contain;
+}
+
+.reveal h1 {
+    text-transform: unset;
+}
+
+.reveal section.icon img {
+    max-width: 200px;
+    max-height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.reveal section img {
+    max-height: 70vh;
+}
