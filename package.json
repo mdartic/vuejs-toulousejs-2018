@@ -1,0 +1,27 @@
+{
+  "name": "vuejs-toulousejs-2018",
+  "version": "0.0.1",
+  "description": "Slides for vuejs meetup in GDG Toulouse (2018-05-24)",
+  "main": "index.js",
+  "scripts": {
+    "start": "reveal-md slides.md --theme black --watch --highlight-theme monokai-sublime --host 0.0.0.0 --css theme/custom.css",
+    "build": "reveal-md slides.md --theme black --highlight-theme monokai-sublime --static public --css theme/custom.css && cp -R assets public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdartic/vuejs-toulousejs-2018.git"
+  },
+  "keywords": [
+    "vuejs",
+    "meetup"
+  ],
+  "author": "Mathieu Dartigues (@mdartic)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdartic/vuejs-toulousejs-2018/issues"
+  },
+  "homepage": "https://github.com/mdartic/vuejs-toulousejs-2018#readme",
+  "dependencies": {
+    "reveal-md": "^2.0.5"
+  }
+}
