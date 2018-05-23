@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue.js demo</title>
+  </head>
+    <body>
+      <h1>
+        Vue.js demo for Toulouse JS, May 2018
+      </h1>
+      <!-- 1. add an element to host your vue.js app here -->
+      <!-- 2. add a topic -->
+      <!-- 3. add an organizer -->
+      <!-- 4. add animators -->
+      <!-- 5. add participants -->
+      <!-- 6. allow dynamic adding / update / delete -->
+      <!-- 7. maybe refactor before the dynamic part ?! -->
+      <div id='app'>
+        <h2>{{topic}}</h2>
+        <div>
+          Organizer:
+          {{ organizer.name }} {{ organizer.first_name }}<br/>
+          <a v-bind:href="'https://twitter.com/' + organizer.twitter">@{{ organizer.twitter }}</a>
+          <a v-bind:href="'https://github.com/' + organizer.twitter">@{{ organizer.github }}</a>
+        </div>
+      </div>
+      <script>
+        // enter your vue.js code here !
+        var app = new Vue({
+          el: '#app',
+          data: {
+            topic: 'Vue.js, introduction & feedbacks',
+            organizer: {
+              name: 'Warnier',
+              first_name: 'Maxime',
+              twitter: 'maxdow',
+              github: 'maxdow'
+            }
+          }
+        })
+      </script>
+  </body>
+</html>

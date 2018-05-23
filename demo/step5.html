@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue.js demo</title>
+  </head>
+    <body>
+      <h1>
+        Vue.js demo for Toulouse JS, May 2018
+      </h1>
+      <!-- 1. add an element to host your vue.js app here -->
+      <!-- 2. add a topic -->
+      <!-- 3. add an organizer -->
+      <!-- 4. add animators -->
+      <!-- 5. add participants -->
+      <!-- 6. allow dynamic adding / update / delete -->
+      <!-- 7. maybe refactor somewhere ?! -->
+      <div id='app'>
+        <h2>{{topic}}</h2>
+        <div>
+          Organizer:
+          <person v-bind:person="organizer" @select="selectPerson"></person>
+        </div>
+        <div>
+          Animators:
+          <ul>
+            <li v-for="animator in animators">
+              <person v-bind:person="animator" @select="selectPerson"></person>
+            </li>
+          </ul>
+        </div>
+        <div>
+          Participants:
+          <ul>
+            <li v-for="participant in participants">
+              <person v-bind:person="participant" @select="selectPerson"></person>
+            </li>
+          </ul>
+        </div>
+        <div>
+          Editing person<br/>
+          Name : <input type="text" v-model="currentPerson.name"/><br/>
+          First name : <input type="text" v-model="currentPerson.first_name"/><br/>
+          twitter : <input type="text" v-model="currentPerson.twitter"/><br/>
+          github : <input type="text" v-model="currentPerson.github"/><br/>
+          <input type="button" value="Add to participants" v-on:click="addParticipant">
+          <input type="button" value="Remove to participants" v-on:click="removeParticipant">
+        </div>
+      </div>
+      <script>
+        var Person = Vue.component('person', {
+          template: `
+            <div>
+              {{ person.name }} {{ person.first_name }}<br/>
+              <a v-bind:href="'https://twitter.com/' + person.twitter">@{{ person.twitter }}</a>
+              <a v-bind:href="'https://github.com/' + person.twitter">@{{ person.github }}</a>
+              <button @click="selectPerson()">Select for edit</button>
+            </div>
+          `,
+          props: ['person'],
+          methods: {
+            selectPerson() {
+              this.$emit('select', this.person)
+            }
+          }
+        });
+        // enter your vue.js code here !
+        var app = new Vue({
+          el: '#app',
+          data: {
+            topic: 'Vue.js, introduction & feedbacks',
+            organizer: {
+              name: 'Warnier',
+              first_name: 'Maxime',
+              twitter: 'maxdow',
+              github: 'maxdow'
+            },
+            animators: [{
+              name: 'Blier',
+              first_name: 'Juliane',
+              twitter: 'tactless7',
+              github: 'tactless7'
+            }, {
+              name: 'Dartigues',
+              first_name: 'Mathieu',
+              twitter: 'mdartic',
+              github: 'mdartic'
+            }],
+            participants: [],
+            currentPerson: {}
+          },
+          methods: {
+            addParticipant() {
+              this.participants.push(this.currentPerson)
+            },
+            removeParticipant() {
+              this.participants = this.participants.filter(p => p !== this.currentPerson)
+            },
+            selectPerson(person) {
+              this.currentPerson = person;
+            }
+          },
+          components: {
+            Person
+          }
+        })
+      </script>
+  </body>
+</html>
