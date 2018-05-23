@@ -37,11 +37,11 @@ Vos Gentils Animateurs
 ------
 
 de Vue.js, à travers
-* une petite-démo-rapide (promis)
 * un peu d'histoire et quelques chiffres
+* une petite-démo-rapide (promis)
 * les concepts clés
 * l'écosystème
-* les échéances à venir 
+* les échéances à venir
 
 ------
 
@@ -54,7 +54,7 @@ et surtout
 * @tactless7 projet Schoolmouv
 * @nnodot projet/expérience "débutant"
 * @val-bubbleflat appli modulaire
-* @mdartic projet Clearance
+* @mdartic projets Artl@s / Clearance
 * @marcelfalliere projet avec framework quasar
 
 ---
@@ -65,24 +65,6 @@ et surtout
 
 * de la guerre des frameworks...
 * et du monstre du loch ness (snif)
-
-
----
-
-# petite-démo-rapide !
-
-promis...
-
-Note:
-
-à voir 
-* v-bind
-* v-if
-* v-for
-* composants Person
-* v-model avec formulaire de personne éditable / supprimable
-* vue-devtools
-
 
 
 ---
@@ -104,7 +86,7 @@ Note:
 
 ## Dates clés (2)
 
-* *2016* : Campagne Patreon, Evan You full time
+* *2016* : [Campagne Patreon](https://www.patreon.com/evanyou), Evan You full time
 * *2016* : Refonte complète avec la 2.0 Ghost In The Shell (Virtual DOM)
 * *2017* : 2.5 Level E avec prise en compte des PWA, SSR, async components...
 * *2017* : VueConf en Pologne
@@ -115,7 +97,7 @@ Note:
 
 ------
 
-## Une popularité GitHub toujours croissante
+## Une popularité GitHub toujours croissante
 
 * [Bestof JS Last 3 Months](https://bestof.js.org/tags/framework/trending/last-3-months)
 * [Bestof JS Last 12 Months](https://bestof.js.org/tags/framework/trending/last-12-months)
@@ -130,21 +112,41 @@ Note:
 
 |||
 |---|---|
-| Nintendo | GitLab |
-| Alibaba  | Facebook ! |
-| Adobe  | Codeship |
+| Nintendo | [GitLab](https://about.gitlab.com/2016/10/20/why-we-chose-vue/) |
+| Alibaba  | [Facebook](https://newsfeed.fb.com) |
+| Adobe  | [Codeship](https://blog.codeship.com/consider-vuejs-next-web-project/) |
 | ...  | ... |
+
+[cf listing](https://github.com/vuejs/awesome-vue#enterprise-usage)
 
 ------
 
 Bref.
 
-Quelques indicateurs qui démontrent 
+Quelques indicateurs qui démontrent
 un intérêt prononcé de la communauté pour cette librairie.
 
 ---
 
-# Les concepts clés
+# petite-démo-rapide !
+
+promis...
+
+Note:
+
+à voir
+* v-bind
+* v-if
+* v-for
+* composants Person
+* v-model avec formulaire de personne éditable / supprimable
+* vue-devtools
+
+
+
+---
+
+# Les concepts clés
 
 ------
 
@@ -152,7 +154,7 @@ un intérêt prononcé de la communauté pour cette librairie.
 
 ------
 
-## Single File Component
+## Single File Component
 
 un template + un script + un style
 
@@ -160,11 +162,20 @@ un template + un script + un style
 
 ------
 
-## Virtual DOM
+<!-- .slide: data-background="./assets/vue-component.png" class="bg-size-contain"  -->
+
+Note:
+
+Possibilité d'utiliser du TypeScript en lieu et place du JS
+du SCSS / PostCSS / Less dans la partie style, de les scoper
 
 ------
 
-## Rendu déclaratif
+## Virtual DOM
+
+------
+
+## Rendu déclaratif
 ## Système de réactivité
 
 ------
@@ -173,28 +184,27 @@ un template + un script + un style
 
 ------
 
-## API développée mais limitée (1)
+## API développée et limitée (1)
 
 * *props* = données d'instanciation du composant
 * *data* = state du composant
 * *computed properties* avec gestion de cache
 * *méthodes*
+* les watchers *watch*
+* le binding des styles (class / style)
+
+------
+
+## API développée et limitée (2)
+
 * *directives*
   * le one-way data flow *v-bind*
   * conditional rendering *v-if / v-else / v-else-if*
   * list rendering *v-for*
-  * les event *v-on*, @click, @mouseenter, @keyenter...
+  * les event *v-on*, @click, @keyenter...
   * les directives customs...
-
-------
-
-## API développée mais limitée (2)
-
-* le binding des styles (class / style)
-* le two-way data flow *v-model* (pratique pour les forms...)
-* les watchers *watch*
-* les slots
-* les mixins
+  * le two-way data binding *v-model* (pratique pour les forms...)
+* les slots / mixins
 * les transitions (=> animation)
 
 
@@ -212,7 +222,7 @@ Vue.js est une bonne entrée en matière pour découvrir les frameworks JS
 
 ------
 
-## Framework progressif
+## Framework progressif ?
 
 Note:
 On parle de Vue.js comme étant le framework progressif / évolutif.
@@ -254,15 +264,20 @@ npm install -g @vue/cli
 vue create my-project
 ```
 
-* plusieurs choix possibles ou réutilisation d'un preset (cf démo)
+* plusieurs choix / réutilisation d'un preset
   * TypeScript / Transpiler ES6/7/x / PWA
   * linters (StandardJS, ESLint)
   * preprocessors pour le style (sass / postcss)
   * test unitaires / d'intégrations
   * accepte le JSX
-* version finale avec webpack 4 & vue-loader 15
 * fonctionne avec des plugins
 * permet de conserver une évolutivité sans éjecter
+
+Note:
+
+cf démo
+
+version finale
 
 ------
 
@@ -302,9 +317,9 @@ Note:
 
 ------
 
-L'écosystème de Vue.js est en constante évolution, 
+L'écosystème de Vue.js est en constante évolution,
 mais il y a un socle qui définit le framework Vue.js
-par l'adoption et la maintenance de briques essentielles 
+par l'adoption et la maintenance de briques essentielles
 au delà de la simple librairie de composant qu'est Vue.js.
 
 ---
@@ -367,17 +382,17 @@ Les retours :
 
 ------
 
-Vue [...] est un framework évolutif 
-pour construire des interfaces utilisateur. 
-À la différence des autres frameworks monolithiques, 
-Vue a été conçu et pensé pour pouvoir être adopté 
-de manière incrémentale. 
-Le cœur de la bibliothèque est concentré uniquement 
-sur la partie vue, et il est vraiment simple 
-de l’intégrer avec d’autres bibliothèques ou projets existants. 
-D’un autre côté, Vue est tout à fait capable 
-de faire tourner des applications web monopages 
-quand il est couplé avec des outils modernes 
+Vue [...] est un framework évolutif
+pour construire des interfaces utilisateur.
+À la différence des autres frameworks monolithiques,
+Vue a été conçu et pensé pour pouvoir être adopté
+de manière incrémentale.
+Le cœur de la bibliothèque est concentré uniquement
+sur la partie vue, et il est vraiment simple
+de l’intégrer avec d’autres bibliothèques ou projets existants.
+D’un autre côté, Vue est tout à fait capable
+de faire tourner des applications web monopages
+quand il est couplé avec des outils modernes
 et des bibliothèques complémentaires.
 
 [source fr.vuejs.org](https://fr.vuejs.org/v2/guide/index.html#Vue-js-qu%E2%80%99est-ce-que-c%E2%80%99est)
@@ -391,6 +406,7 @@ et des bibliothèques complémentaires.
 * [Vue.js News](https://news.vuejs.org/) avec podcast
 * [Channel Discord](https://discordapp.com/channels/325477692906536972/360669119948783616)
 * [Communauté traduction FR](https://gitter.im/vuejs-fr/vue)
+* [VueConf New Orleans 2018](https://www.vuemastery.com/vueconf)
 
 ---
 
