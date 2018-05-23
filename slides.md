@@ -110,6 +110,9 @@ Note:
 * *2017* : VueConf en Pologne
 * *2018* : VueConf qui se multiplient : Amsterdam, US, Barcelone...
 
+Note:
+2016 marque le début de l'envolée de la popularité de vue
+
 ------
 
 ## Une popularité GitHub toujours croissante
@@ -202,6 +205,10 @@ un template + un script + un style
 * documentation claire, maintenue au fil des évolutions, traduite dans plusieurs langues
 * comparatif entre frameworks sur la doc°
 * breaking change peu nombreux, assistés en cas de migration
+* courbe d'évolution très rapide
+
+Note:
+Vue.js est une bonne entrée en matière pour découvrir les frameworks JS
 
 ------
 
@@ -215,6 +222,9 @@ Pourquoi le framework progressif ?
 ------
 
 <!-- .slide: data-background="./assets/vuejs-progressive-framework.png" class="bg-size-contain" -->
+
+Note:
+Chaque nouveau cercle (hormis les deux premiers) est une brique à ajouter au framework
 
 ---
 
@@ -230,6 +240,9 @@ Pourquoi le framework progressif ?
 * *translation* : vue-i18n, vue-gettext
 * *tests* : vue-test-utils avec jest
 * *debug* : vue-devtools
+
+Note:
+Vue-devtools sur Google Chrome et plus récemment sur Firefox
 
 ------
 
@@ -263,6 +276,9 @@ vue create my-project
   * Split automatique du code selon les routes
   * Transpilation ES6/ES7
 
+Note:
+Il existe aussi vue-ssr (doc dans les repos officiels vue.js)
+
 ------
 
 ## Mobile
@@ -270,6 +286,10 @@ vue create my-project
 * [NativeScript-Vue](https://nativescript-vue.org/)
 
 * [Weex](https://weex.apache.org/) (Apache Incubator, projet d'Alibaba initialement)
+
+Note:
+* Outils récents (sortie fin 2017/début 2018)
+* Encore peu de retours sur leur utilisation
 
 ------
 
