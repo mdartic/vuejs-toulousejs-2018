@@ -4,8 +4,9 @@
   "description": "Slides for vuejs meetup in GDG Toulouse (2018-05-24)",
   "main": "index.js",
   "scripts": {
-    "start": "reveal-md slides.md --theme black --watch --highlight-theme monokai-sublime --host 0.0.0.0 --css theme/custom.css",
-    "build": "reveal-md slides.md --theme black --highlight-theme monokai-sublime --static public --css theme/custom.css && cp -R assets public/"
+    "start": "reveal-md --theme black --watch --highlight-theme monokai-sublime --host 0.0.0.0 --css theme/custom.css",
+    "build": "reveal-md slides.md --theme black --highlight-theme monokai-sublime --static public --css theme/custom.css && cp -R assets public/",
+    "deploy": "surge public/ http://vuejs-toulousejs-2018-05.surge.sh/"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/mdartic/vuejs-toulousejs-2018#readme",
   "dependencies": {
-    "reveal-md": "^2.0.5"
+    "reveal-md": "^2.0.5",
+    "surge": "^0.20.1"
   }
 }
