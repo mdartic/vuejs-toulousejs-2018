@@ -350,7 +350,7 @@ Onboarding facile
 * vue-cli 3.0 avec webpack 4 et vue-loader 15
 * morceau extrait de vue-loader pour compat rollup / parcel / ?
 * mise en place de la 2.6-next avec abandon support IE, utilisation des Proxy => plus de caveat pour le système de réactivité
-* mise en place de RFC pour mieux diriger
+* mise en place de RFC pour mieux diriger l'évolution de la librairie
 * stabilisation de la librairie, travail sur les briques d'accompagnement
 
 ---
@@ -372,7 +372,7 @@ Les retours :
 * @tactless7 projet Schoolmouv
 * @nnodot projet/expérience "débutant"
 * @val-bubbleflat appli modulaire
-* @mdartic projet Clearance
+* @mdartic projet Artl@s / Clearance
 * @marcelfalliere projet avec framework quasar
 
 ---
