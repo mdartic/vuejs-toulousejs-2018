@@ -271,7 +271,7 @@ vue create my-project
   * test unitaires / d'intégrations
   * accepte le JSX
 * fonctionne avec des plugins
-* permet de conserver une évolutivité sans éjecter
+* permet de surcharger la configuration webpack / ...
 
 Note:
 
